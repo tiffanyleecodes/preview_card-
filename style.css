@@ -1,0 +1,165 @@
+
+
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+ 
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background-color:hsl(233, 47%, 7%) ;
+    color:white;
+    display:flex;
+    align-items: center;
+    font-size:15px;
+
+}
+
+.container {
+   
+    max-width:1050px;
+    margin: 0 auto;
+}
+
+
+.card {
+    background-color:  hsl(244, 38%, 16%);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:2rem;
+    
+
+}
+
+.text{
+    margin:14%;
+}
+
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture {
+    position: relative;
+}
+
+.picture::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(277, 64%, 61%, 0.6);
+}
+
+.discription {
+    color:hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+}
+
+
+
+
+.data_box {
+    display:flex;
+    justify-content: space-between;
+    margin-top:10%;
+    
+}
+
+.data_box h2 {
+
+    font-size:24px;
+    margin-bottom:5%;
+    
+    text-transform: uppercase;
+ 
+
+} 
+
+.data_box p {
+
+    color:hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+@media only screen and (min-width: 430px) and (max-width:700px){
+       h1 {
+        font-size:24px;
+       }
+
+       p{
+        font-size: 12px;
+        margin-top:20px;
+       }
+
+       .data_box h2 {
+        font-size:16px;
+       }
+
+       .data_box p {
+        font-size: 8px;
+        margin-top:-3px;
+       }
+
+
+
+}
+
+    
+
+@media only screen and (max-width: 430px){
+    body {
+        text-align:center;
+        
+    }
+
+    .card {
+        
+        grid-template-columns: 1fr; 
+        
+    }
+
+    .picture {
+        order:-1;
+    }
+
+    .data_box {
+        flex-direction: column;
+        
+    }
+
+   .title {  
+        font-size:25px;
+        margin-bottom:20px;
+
+   }
+        
+   .data_box p{
+          margin-top:-10px;
+          font-size:12px;
+   }
+   
+   .data_box div{
+    padding-bottom:25px;
+   }
+
+    
+   
+
+    
+}
